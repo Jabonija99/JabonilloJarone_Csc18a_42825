@@ -1,0 +1,11 @@
+Part 1:  
+	In our Fractions class we have completed in class, for the methods: add, subtract, multiply, and divide, rewrite the code inside their respective non-static methods so they internally call the respective static method.
+
+Part 2: 
+	For each of the static AND non-static methods for add, subtract, multiply, divide, write a MINIMUM of 2 new test methods inside the jUnitTest class.
+
+
+
+You may work on this as a team of up to to two (you will still have to turn in your individual submissions - make sure to comment who you worked with).
+
+Due: 5/13/16 by 6:00PM (NO EXCEPTIONS FOR LATE WORK). For documentation, make sure to include a properly filled out PSP Spreadsheet for the assignment, OR have project placed on Github with a minimum of 3 pushes (commits).
