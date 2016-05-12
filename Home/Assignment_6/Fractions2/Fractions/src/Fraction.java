@@ -101,6 +101,7 @@ public class Fraction {
     
     public Fraction add(Fraction f2)
     {
+        /*
         int a = numerator; // numerator of our fraction object
         int b = denominator; // denominator of our fraction object
         int c = f2.getNumerator(); // numerator of f2 argument
@@ -112,10 +113,14 @@ public class Fraction {
         }
         int _gcd = gcd(a*d+b*c,b*d);
         return new Fraction( (a*d+b*c)/_gcd, (b*d)/_gcd );
+        
+        */
+        return Fraction.add(this, f2);
     }
     
     public Fraction subtract(Fraction f2)
     {
+        /*
         int a = numerator; // numerator of our fraction object
         int b = denominator; // denominator of our fraction object
         int c = f2.getNumerator(); // numerator of f2 argument
@@ -127,6 +132,8 @@ public class Fraction {
         }
         
         return new Fraction( a*d-b*c, b*d );
+        */
+        return Fraction.subtract(this, f2);
     }
     
     public Fraction multiply(Fraction f2)
@@ -142,12 +149,15 @@ public class Fraction {
     
     public Fraction divide(Fraction f2)
     {
+        /*
         int a = numerator; // numerator of our fraction object
         int b = denominator; // denominator of our fraction object
         int c = f2.getNumerator(); // numerator of f2 argument
         int d = f2.getDenominator(); // denominator of f2 argument
         
         return new Fraction( a*d, b*c );
+        */
+        return Fraction.divide(this, f2);
     }
     
     // implementation of static methods for add, subtract, multiply and divide

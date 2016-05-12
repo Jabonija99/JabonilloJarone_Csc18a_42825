@@ -1,4 +1,4 @@
-Part 1:  
+Part 1:  <COMPLETED>
 	In our Fractions class we have completed in class, for the methods: add, subtract, multiply, and divide, rewrite the code inside their respective non-static methods so they internally call the respective static method.
 
 Part 2: 
