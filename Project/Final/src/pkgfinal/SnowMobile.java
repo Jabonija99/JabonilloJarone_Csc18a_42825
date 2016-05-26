@@ -7,17 +7,20 @@ public class SnowMobile extends Rental{
     private String vin; //Vehicle identification number
     
     
-    public SnowMobile(boolean newModel, double rentCost, long rentNum, int size){
-        super(newModel, rentCost, rentNum);
+    public SnowMobile(boolean newModel, double rentCost, long rentNum, int cap,
+            String vin){
+        super(newModel, rentCost, rentNum); //Rental construction
         
-        setCap(cap);
+        setCap(cap); //Set Capacity
+        setVin(vin); //Set vehicle ID
     }
     
+    //Return capacity
     public int getCap() {
-        return cap;
+        return cap; 
     }
 
-    
+    //Set capacity
     public void setCap(int cap) {
         if(cap > 0)
             this.cap = cap;
@@ -25,10 +28,12 @@ public class SnowMobile extends Rental{
             throw new IllegalArgumentException("Bounds Error: Snowomobile cap");
     }  
    
+    //Return vehicle ID
     public String getVin() {
         return vin;
     }
 
+    //Set vehicle ID
     public void setVin(String vin) {
         if(vin == "")
             throw new IllegalArgumentException("Invalid VIN");
@@ -36,16 +41,18 @@ public class SnowMobile extends Rental{
             this.vin = vin;
     }
     
+    //Snow mobile string output
     @Override
     public String toString(){
-        return String.format("New Model: %d\nRental Cost: %.2f\n"
-                + "Rental Number: %d\nCapacity: %d\nVIN: %s", isNewModel(), 
+        return String.format("New Model: %s\nRental Cost: %.2f\n"
+                + "Rental Number: %d\nCapacity: %d\nVIN: %s\n", isNewModel(), 
                 getRentCost(), getRentNum(), cap, vin);
     }
     
+    //Snow mobile late charge fee (20+capacity*5)%
     @Override
     public double lateCharge(){
-        return getRentCost() + (getRentCost()*((20+cap*5)/10));
+        return (getRentCost() + (getRentCost()*((20+(double)cap*5)/100.00)));
     }
 
     

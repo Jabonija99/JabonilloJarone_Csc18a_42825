@@ -8,17 +8,18 @@ public class Snowboard extends Rental{
     
     public Snowboard(boolean newModel, double rentCost, long rentNum, 
             int size, boolean freestyle){
-        super(newModel, rentCost, rentNum);
+        super(newModel, rentCost, rentNum); //Rental construction
         
-        setSize(size);
-        setFreestyle(freestyle);
+        setSize(size); //Set size
+        setFreestyle(freestyle);//Set board style
     }
     
+    //Return size
     public int getSize() {
         return size;
     }
 
-    
+    //Set size
     public void setSize(int size) {
         if(size > 0)
             this.size = size;
@@ -26,14 +27,17 @@ public class Snowboard extends Rental{
             throw new IllegalArgumentException("Bounds Error: Snowboard Size");
     }
     
+    //Return board style
     public boolean isFreestyle() {
         return freestyle;
     }
 
+    //Set board style
     public void setFreestyle(boolean freestyle) {
         this.freestyle = freestyle;
     }
     
+    //Snowboard output string
     @Override
     public String toString(){
         return String.format("New Model: %s\nRental Cost: %.2f\n"
@@ -41,6 +45,7 @@ public class Snowboard extends Rental{
                 isNewModel(), getRentCost(), getRentNum(), size, freestyle);
     }
     
+    //Snowboard late charge 20%
     @Override
     public double lateCharge(){
         return getRentCost() + (getRentCost()*.2);

@@ -9,9 +9,9 @@ public abstract class Rental {
     
     //Constructor
     public Rental(boolean newModel, double rentCost, long rentNum){
-        setNewModel(newModel);
-        setRentCost(rentCost);
-        setRentNum(rentNum);
+        setNewModel(newModel); //Set new model flag
+        setRentCost(rentCost); //Set cost of rent
+        setRentNum(rentNum); //Set rental number
     }
     
     //Equals method
