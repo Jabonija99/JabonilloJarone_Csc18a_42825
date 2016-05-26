@@ -1,0 +1,14 @@
+Final Project instructions
+
+A. Create an abstract class named Rental. 
+Must have instance variables: newModel type boolean, rentalCost type double, and rentalNumber type long int. All must be private.
+
+It also must include the following member functions:
+
+1. equals() which returns true if two Rental objects have the same rentalNumber.
+
+2. all of the appropriate get/set methods for each of the above member variables. Make sure to have data validation done on the set methods to prevent invalid/illegal values from being passed into the member variables. (Example: rentalCost should not be allowed to be negative).
+
+3. include an abstract method named lateCharge, that will only be implemented in child classes that inherit the Rental class.
+
+B. Create 3 subclass to inherit Rental class: Ski, Snowboard, SnowMobile
